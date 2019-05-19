@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="stylesheets/survey_form.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/survey_form_web.css">
+    <link href="https://fonts.googleapis.com/css?family=Niramit|Raleway" rel="stylesheet">
+	<title></title>
+</head>
+
+<body>
+	<main>
+		<h1 id="title">Ninja pension status</h1>
+		<p id="description">Every day your Ninja is gathering karma points, which will convert to valid pension fund. This form allows you to check status of your Ninja pension fund.</p>
+		<form id="survey-form" action="" method="post" class="margin">
+			<div id="form-grid">
+
+				<div id="contacts1">
+					<label id="name-label" for="name">*</label>
+					<input id="name" type="text" name="ninja_name" placeholder="Ninja name" required>
+				</div>
+
+				<div id="contacts2">
+					<label id="email-label" for="email">*</label>
+					<input id="email" type="email" name="ninja_email" placeholder="Ninja email" required>
+				</div>
+
+				<div id="age">
+					<label id="number-label" for="number">*</label>
+					<input id="number" type="number" name="ninja_age" min="0" max="120" placeholder="Ninja age" required>	
+				</div>
+			
+				<div id="level" class="justify-txt">
+					<label id="level-label" for="level">What is your Ninja expertise level?</label><br>
+					<div class="custom-select">
+						<select id="dropdown" name="level">
+							<option value="">Baby Ninja</option>
+							<option value="">Practising Ninja</option>
+							<option value="">Expert Ninja</option>
+							<option value="">Super Shiny Ninja</option>
+							<option value="">Free Ninja</option>
+						</select>
+					</div>
+				</div>
+
+				<div id="award-section" class="justify-txt">
+					<label id="award-label" for="awards">Which award your Ninja won or is seeking to win?</label><br>
+					<div class="wrapper">
+						<div class="awards">
+							<input id="awards1" type="radio" name="awards" value="none" checked>
+							<label for="awards1">None</label>					
+						</div>
+						<div class="awards">
+							<input id="awards2" type="radio" name="awards" value="worrior">
+							<label for="awards2">Sin Tsu Worrior</label>
+						</div>
+						<div class="awards">
+							<input id="awards3" type="radio" name="awards" value="actor">
+							<label for="awards3">Super Movie Star</label>
+						</div>
+						<div class="awards">
+							<input id="awards4" type="radio" name="awards" value="shadow">
+							<label for="awards4">Shadow of the Life</label>
+						</div>
+					</div>
+				</div>
+
+
+				<div id="weapon-section" class="justify-txt">
+					<label id="weapon-label" for="weapon">Which method uses your Ninja for defense?</label><br>
+					<div class="wrapper">
+						<div class="weapon">
+							<input id="weapon1" type="checkbox" name="weapon" value="unvisibility">
+							<label for="weapon1">Unvisibility Trick</label>
+						</div>
+						<div class="weapon">
+							<input id="weapon2" type="checkbox" name="weapon" value="thoughts">
+							<label for="weapon2">Silent Communication</label>
+						</div>
+						<div class="weapon">
+							<input id="weapon3" type="checkbox" name="weapon" value="techniques">
+							<label for="weapon3">Defense techniques</label>
+						</div>
+						<div class="weapon">
+							<input id="weapon4" type="checkbox" name="weapon" value="all">
+							<label for="weapon4">All above means</label>
+						</div>
+					</div>
+				</div>
+
+				<div id="volunteer-section">
+					<label id="volunteer-label" for="volunteer">How much your Ninja volunteers?</label><br>
+					<textarea id="volunteer" name="voluneer_exp" rows="4" cols="50" placeholder="Write about your Ninja's volunteering experience."></textarea>
+				</div>
+
+				<div id="footer">
+					<button id="submit" type="submit" onclick="alert('Calculator is under construction. Come back later!')">Count!</button>
+					<div id="shadow-box"></div>
+				</div>
+			</div>
+		</form>
+	</main>
+
+	<footer>developed by siMona</footer>
+	<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    background-image: linear-gradient(45deg, #47C2A1, #03334C);
+    background-repeat: no-repeat;
+
+}
+h1, h2, h3, h4, h5, h6, button {
+    font-family: 'Niramit', sans-serif;
+    font-weight: normal;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+p, label, select, footer {
+    font-family: 'Raleway', sans-serif;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+main {
+	border: 2px solid rgba(255,255,255, 0.5);
+	border-radius: 8px;
+	margin: 2rem 1rem 4rem 1rem;
+	background-color: rgba(255,255,255, 0.15);
+	display: grid;
+	grid-template-columns: 12fr;
+	grid-template-areas:
+	"header"
+	"description"
+	"form"
+	"footer";
+}
+
+#title {
+	grid-area: header;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 8px 0px 8px 0px;
+}
+
+#description {
+	grid-area: description;
+	text-align: justify;
+	margin: 8px 10px 8px 10px;
+}
+
+#survey-form{
+	grid-area: form;
+}
+
+#form-grid {
+	display: grid;
+	grid-template-columns: 6fr 6fr;
+	grid-template-areas:
+	"name name"
+	"email email"
+	"age age"
+	"level level"
+	"awards awards"
+	"weapons weapons"
+	"volunteer volunteer"
+	"footer footer"
+	"shadow shadow";
+}
+
+#contacts1 {
+	grid-area: name;
+}
+
+#contacts2 {
+	grid-area: email;
+}
+
+#age {
+	grid-area: age;
+}
+
+#contacts1, #contacts2, #age {
+	text-align: center;
+}
+
+#contacts1 label, #contacts2 label, #age label {
+	font-size: 2rem;
+	vertical-align: -6px;
+}
+
+#level {
+	grid-area: level;
+}
+
+#award-section {
+	grid-area: awards;
+}
+
+#weapon-section {
+	grid-area: weapons;
+}
+
+#volunteer-section {
+	grid-area: volunteer;
+}
+
+#footer {
+	grid-area: footer;
+}
+
+#level label, #award-section label, #weapon-section label, #volunteer-section label {
+	font-size: 1.1rem;
+}
+
+#name-label, #email-label, #number-label, #level-label, #award-label, #weapon-label, #volunteer-label {
+	font-weight: bolder;
+}
+
+.margin {
+	margin: 8px 10px 8px 10px;	
+}
+
+#contacts1, #contacts2, #age, #level, #award-section, #weapon-section, #volunteer-section, #footer {
+	margin-top: 1rem;
+}
+
+#name, #email, #number, textarea {
+	font-family: 'Raleway', sans-serif;
+	font-size: 0.9rem;
+	border-radius: 4px;
+	border-style: solid;
+	border-color: rgba(255,255,255, 0.5);
+	color: #03334C;
+}
+
+#name, #email, #number {
+	height: 1.8rem;
+	text-align: center;
+	width: 12rem;
+}
+
+textarea {
+	width: 100%;
+	height: 4rem;
+	margin-top: 0.4rem;
+}
+
+select:focus {
+	border-color: rgba(255,255,255, 0.5);
+}
+
+input:focus, select:focus, textarea:focus {
+	color: #03334C;
+	outline: none;
+	box-shadow: 0 0 3pt 2pt rgba(3, 51, 76, 0.6);
+}
+
+.justify-txt {
+	text-align: justify;
+}
+
+#footer {
+	text-align: center;
+	grid-gap: 0;
+}
+
+.custom-select {
+  	position: relative;
+  	font-family: 'Raleway', sans-serif;
+}
+
+.custom-select select {
+  	display: none;
+}
+
+.select-selected {
+  	background-color: #FFFFFF;
+  	border-radius: 4px;
+}
+
+.select-selected:after {
+  	position: absolute;
+  	content: "";
+  	top: 14px;
+  	right: 10px;
+  	width: 0;
+  	height: 0;
+  	border: 6px solid transparent;
+  	border-color: #03334C transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  	border-color: transparent transparent #03334C transparent;
+  	top: 7px;
+}
+
+.select-items div,.select-selected {
+  	color: #03334C;
+  	padding: 8px 16px;
+  	border: 1px solid transparent;
+  	border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  	cursor: pointer;
+  	user-select: none;
+}
+
+.select-items {
+  	position: absolute;
+  	background-color: #FFFFFF;
+  	border-radius: 4px;
+  	top: 0%;
+  	left: 0;
+  	right: 0;
+  	z-index: 99;
+}
+
+.select-hide {
+  	display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-select, .wrapper {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+label {
+	padding-bottom: 0.3rem;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+    line-height: 1rem;
+    display: inline-block;
+    color: #FFFFFF;
+}
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.875rem;
+    height: 0.875rem;
+    border: 1px solid rgba(255,255,255, 0.5);
+    border-radius: 100%;
+    background: #FFFFFF;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 0.75rem;
+    height: 0.75rem;
+    background: #03334C;
+    position: absolute;
+    top: 0.125rem;
+    left: 0.125rem;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  	position: absolute;
+  	left: -9999px;
+}
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  	position: relative;
+  	padding-left: 2rem;
+  	cursor: pointer;
+}
+
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+ 	content: '';
+ 	position: absolute;
+ 	left: 0; 
+ 	top: 0;
+ 	width: 0.875rem; 
+ 	height: 0.875rem;
+  	border: 1px solid rgba(255,255,255, 0.5);
+  	background: #FFFFFF;
+ 	border-radius: 4px;
+}
+
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  	content: '\2714';
+  	position: absolute;
+  	top: 0.125rem; 
+  	left: 0.125rem;
+  	font-size: 1rem;
+  	line-height: 0.8;
+  	color: #03334C;
+}
+
+[type="checkbox"]:not(:checked) + label:after {
+  	opacity: 0;
+  	transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  	opacity: 1;
+  	transform: scale(1);
+}
+
+button {
+	border-radius: 40px;
+	border: 1px solid rgba(3, 51, 76, 1);
+	background-color: rgba(3, 51, 76, 1);
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	padding: 3px 20px 3px 20px;
+}
+
+footer {
+	grid-area: footer;
+	text-align: center;
+	height: 1.5rem;
+	grid-row-gap: 0rem;
+}
+
+#shadow-box {
+	width: 100%;
+	height: 0.3rem;
+	border: 1px solid rgba(255,255,255, 0);
+	border-radius: 50%;
+	box-shadow: 0 2.5rem 30px 2px rgba(3, 51, 76, 0.4);
+}

@@ -1,0 +1,40 @@
+/* For desktop: */
+@media only screen and (min-width: 769px) {
+
+	main {
+		margin: 4rem 12rem 5rem 12rem;
+		padding: 1rem 2rem 0.5rem 2rem;
+	}
+
+	#form-grid {
+		display: grid;
+		grid-template-columns: 2fr 4fr 4fr 2fr;
+		grid-template-areas:
+		". name age ."
+		". email . ."
+		"level level awards awards"
+		"weapons weapons volunteer volunteer"
+		"footer footer footer footer"
+		"shadow shadow shadow shadow";
+	}
+
+	#level, #weapon-section {
+		margin-top: 1.5rem;
+		margin-right: 2rem;
+	}
+	#award-section, #volunteer-section {
+		margin-top: 1.5rem;
+		margin-left: 2rem;
+	}
+
+	textarea {
+		height: 5rem;
+	}
+
+	#name, #email, #number {
+	height: 1.8rem;
+	text-align: center;
+	width: 80%;
+}
+
+}
